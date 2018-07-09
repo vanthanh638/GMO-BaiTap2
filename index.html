@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Bai Tap 2 | HTML, CSS, JAVASCRIPT</title>
+        <meta charset="utf-8">
+        <link rel="icon" type="image/x-icon" href="images/bkdn.png">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <script src="js/script.js"></script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div>
+                <h4>1. Table</h4>
+                <table id="table1">
+                    <tr>
+                        <th>STT</th>
+                        <th>Name</th>
+                        <th>Class</th>
+                        <th>School</th>
+                        <th style="width: 10px;"><input type="checkbox" name="all" id="checkAll" onchange="checkAll()"></th>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <label onclick="selectElement('name', 1)" id="lb_name_1">Thanh</label>
+                            <input type="text" name="edit" hidden="hidden" id="edit_name_1" value="" onblur="edit()">
+                        </td>
+                        <td>
+                            <label onclick="selectElement('class', 1)" id="lb_class_1">13T4</label>
+                            <input type="text" name="edit" hidden="hidden" id="edit_class_1" value="" onblur="edit()">
+                        </td>
+                        <td>
+                            <label onclick="selectElement('school', 1)" id="lb_school_1">DUT</label>
+                            <input type="text" name="edit" hidden="hidden" id="edit_school_1" value="" onblur="edit()">
+                        </td>
+                        <td><input type="checkbox" name="check1" onchange="allCheck()"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <label onclick="selectElement('name', 2)" id="lb_name_2">Hoang Xuan Vinh</label>
+                            <input type="text" name="edit" hidden="hidden" id="edit_name_2" value="" onblur="edit()">
+                        </td>
+                        <td>
+                            <label onclick="selectElement('class', 2)" id="lb_class_2">16T1</label>
+                            <input type="text" name="edit" hidden="hidden" id="edit_class_2" value="" onblur="edit()">
+                        </td>
+                        <td>
+                            <label onclick="selectElement('school', 2)" id="lb_school_2">DUT</label>
+                            <input type="text" name="edit" hidden="hidden" id="edit_school_2" value="" onblur="edit()">
+                        </td>
+                        <td><input type="checkbox" name="check1" onchange="allCheck()"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <label onclick="selectElement('name', 3)" id="lb_name_3">Thanh</label>
+                            <input type="text" name="edit" hidden="hidden" id="edit_name_3" value="" onblur="edit()">
+                        </td>
+                        <td>
+                            <label onclick="selectElement('class', 3)" id="lb_class_3">13T4</label>
+                            <input type="text" name="edit" hidden="hidden" id="edit_class_3" value="" onblur="edit()">
+                        </td>
+                        <td>
+                            <label onclick="selectElement('school', 3)" id="lb_school_3">DUT</label>
+                            <input type="text" name="edit" hidden="hidden" id="edit_school_3" value="" onblur="edit()">
+                        </td>
+                        <td><input type="checkbox" name="check1" onchange="allCheck()"></td>
+                    </tr>
+                </table>
+            </div>
+            <!--  -->
+            <div class="bai2">
+                <h4>2. Radio Button</h4>
+                <div class="gender">
+                    <input type="radio" name="gender" value="nam" id="nam" checked="checked" onchange="chageImg()">
+                    <label for="nam">Nam</label>
+                    <input type="radio" name="gender" value="nu" id="nu" onchange="chageImg()">
+                    <label for="nu">Nữ</label>
+                </div>
+                <div class="img_gender">
+                    <img id="img_gender" src="images/male.jpg" alt="Nam">
+                </div>
+            </div>
+            <div class="clear"></div>
+            <!--  -->
+            <div id="addImages">
+                <h4>3. Upload file:</h4>
+                <div id="addImage_1" class="addImage">
+                    <input type="file" name="image" id="file_1" onchange="handleFileSelect(1)"><button onclick="addInput()">+</button>
+                </div>
+            </div>
+            <div id="files-list"></div>
+            <!--  -->
+            <div>
+                <h4>4. List Images</h4>
+                <div class="listcb">
+                    <input type="checkbox" name="listImg" value="all" onchange="checkImg('all')" checked="checked">All<br>
+                    <input type="checkbox" name="listImg" value="bong" onchange="checkImg('bong')" checked="checked">Bóng<br>
+                    <input type="checkbox" name="listImg" value="cay" onchange="checkImg('cay')" checked="checked">Cây<br>
+                    <input type="checkbox" name="listImg" value="hoa" onchange="checkImg('hoa')" checked="checked">Hoa<br>
+                    <input type="checkbox" name="listImg" value="nha" onchange="checkImg('nha')" checked="checked">Nhà<br>
+                </div>
+                <div class="listImages" id="images">
+                    <img src="images/bong.jpg" alt="Bong" id="bong">
+                    <img src="images/cay.jpg" alt="Cay" id="cay">
+                    <img src="images/hoa.jpg" alt="Hoa" id="hoa">
+                    <img src="images/nha.jpg" alt="Nha" id="nha">
+                </div>
+            </div>
+            <div class="clear"></div>
+            <!--  -->
+            <!-- Slide show -->
+            <div class="slide-show fade">
+                <h4>4. Slide show</h4>
+                <div class="mySlides">
+                    <img src="images/da-nang-1.png" alt="slide 1">
+                </div>
+                <div class="mySlides">
+                    <img src="images/da-nang-2.jpg" alt="slide 2">
+                </div>
+                <div class="mySlides">
+                    <img src="images/da-nang-3.jpg" alt="slide 3">
+                </div>
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <div style="text-align:center">
+                <span class="numSlide" onclick="currentSlide(1)">1</span>
+                <span class="numSlide" onclick="currentSlide(2)">2</span>
+                <span class="numSlide" onclick="currentSlide(3)">3</span>
+            </div>
+
+            <!--  -->
+            <div class="list-link">
+                <h4>5.</h4>
+                <ul>
+                    <li><a href="#" id="all" onclick="changeBackground('all')">All</a></li>
+                    <li><a href="#" id="1" onclick="changeBackground('1')">1</a></li>
+                    <li><a href="#" id="2" onclick="changeBackground('2')">2</a></li>
+                    <li><a href="#" id="3" onclick="changeBackground('3')">3</a></li>
+                    <li><a href="#" id="4" onclick="changeBackground('4')">4</a></li>
+                    <li><a href="#" id="5" onclick="changeBackground('5')">5</a></li>
+                    <li><a href="#" id="chan" onclick="changeBackground('chan')">Chẵn</a></li>
+                    <li><a href="#" id="le" onclick="changeBackground('le')">Lẻ</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>6. Chat</h4>
+                <textarea name="content" id="content" rows="10" cols="29" disabled></textarea>
+                <br>
+                <button id="b" onclick="changefont('b')" value="none"><b>b</b></button>
+                <button id="i" onclick="changefont('i')" value="normal"><em>i</em></button>
+                <br>
+                <input type="text" name="chat" id="txt" value="">
+                <button id="enter">enter</button>
+            </div>
+        </div>
+        <script>
+            var table =  document.getElementById("table1");
+            var rows = table.getElementsByTagName("tr");
+            for (var i = 1; i < rows.length; i++) {
+                rows[i].children[0].innerHTML = i;
+            }
+        </script>
+        <script src="js/slide.js"></script>
+        <script src="js/chat.js"></script>
+        <script src="js/select_file.js"></script>
+    </body>
+</html>

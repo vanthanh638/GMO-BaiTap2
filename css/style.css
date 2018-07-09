@@ -1,0 +1,96 @@
+.wrapper {
+    width: 500px;
+    margin: 30px auto;
+}
+table, tr, th, td{
+    border: 1px solid;
+}
+table {
+    border-collapse: collapse;
+    width: 500px;
+    text-align: left;
+}
+.bai2 {
+    margin: 50px auto;
+    width: 500px;
+}
+.gender {
+    float: left;
+}
+.img_gender {
+    float: left;
+    margin-left: 50px;
+}
+#addImages div{
+    margin-bottom: 10px;
+}
+#img_gender {
+    width: 50px;
+    height: 50px;
+}
+.listcb {
+    float: left;
+}
+.listImages {
+    float: right;
+}
+.listImages img {
+    width: 80px;
+}
+.slide-show {
+    margin: 30px auto 5px auto;
+    max-width: 500px;
+    position: relative;
+}
+.mySlides img {
+    width: 500px;
+    vertical-align: middle;
+}
+.mySlides {
+    display: none;
+}
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+.numSlide {
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    margin: 2px 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.active, .numSlide:hover {
+    background-color: #717171;
+}
+.list-link ul {
+    list-style-type: none;
+}
+.list-link ul li a{
+    text-decoration: none;
+}
+#txt {
+    width: 200px;
+}
+.clear {
+    clear: both;
+}
